@@ -5,3 +5,10 @@
 **/.idea/*
 !**/.idea/dictionaries/
 *.iml
+
+# npm
+node_modules/
+
+# Parcel
+.parcel-cache/
+dist/
