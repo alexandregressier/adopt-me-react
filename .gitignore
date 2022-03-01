@@ -1,0 +1,7 @@
+# macOS
+.DS_Store
+
+# JetBrains IDEs
+**/.idea/*
+!**/.idea/dictionaries/
+*.iml
