@@ -1,4 +1,4 @@
-const Pet = (props) =>
+const Pet = props =>
   <div>
     <h1>{props.name}</h1>
     <h2>{props.animal}</h2>
