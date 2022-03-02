@@ -5,7 +5,7 @@ import useBreeds from "./useBreeds"
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"]
 
 const SearchParams = () => {
-  const [location, setLocation] = useState("Seattle, WA")
+  const [location, setLocation] = useState("")
   const [animal, setAnimal] = useState("")
   const [breed, setBreed] = useState("")
   const [pets, setPets] = useState([])
@@ -22,7 +22,12 @@ const SearchParams = () => {
   }
 
   return <div className="search-params">
-    <form>
+    <form
+      onSubmit={e => {
+        e.preventDefault()
+        requestPets()
+      }}
+    >
       <label htmlFor="location">
         Location
         <input
@@ -71,6 +76,7 @@ const SearchParams = () => {
           )}
         </select>
       </label>
+      <button type="submit">Search</button>
     </form>
     {
       pets.map(pet =>
